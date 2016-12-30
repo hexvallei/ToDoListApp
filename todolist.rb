@@ -10,8 +10,7 @@ class MyList
   attr_reader :list
   attr_accessor :item
     
-  def initialize(item)
-    @item = item
+  def initialize
     @list = []
   end
   
@@ -24,10 +23,21 @@ class MyList
   end
   
   def to_s
-    @list
+    @list.to_s
   end
 
 end
+
+to_do_list = MyList.new
+
+to_do_list.add_item("one")
+to_do_list.add_item("two")
+
+puts to_do_list
+
+to_do_list.clear_list
+
+puts to_do_list
 
 
 
